@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Resume Ranker</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+<div class="topbar">
+<div class="brand">AI Resume Ranker</div>
+<div class="badge">Recruiter Dashboard</div>
+</div>
+<div class="stats">
+<div class="stat"><h3>Fast Ranking</h3><p class="small">Analyze multiple resumes instantly</p></div>
+<div class="stat"><h3>AI Matching</h3><p class="small">Smart score based on JD</p></div>
+<div class="stat"><h3>Export Ready</h3><p class="small">PDF reports</p></div>
+</div>
+<div class="panel">
+<form action="/upload" method="POST" enctype="multipart/form-data">
+<div class="grid">
+<div>
+<label>Job Title</label>
+<input type="text" name="job_title" placeholder="Frontend Developer">
+</div>
+<div>
+<label>Experience Level</label>
+<select name="level">
+<option>Entry Level</option><option>Mid Level</option><option>Senior</option>
+</select>
+</div>
+</div>
+<label>Job Description</label>
+<textarea name="job_desc" rows="8" placeholder="Paste complete job description..."></textarea>
+<label>Upload Resumes</label>
+<input type="file" name="resumes" multiple>
+<div class="grid">
+<button type="submit">Analyze Candidates</button>
+<button type="reset">Reset Form</button>
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>

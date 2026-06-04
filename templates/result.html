@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .stats{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:15px;
+            margin-bottom:25px;
+        }
+
+        .stat{
+            background:rgba(255,255,255,0.08);
+            padding:20px;
+            border-radius:18px;
+            text-align:center;
+        }
+
+        .badge{
+            display:inline-block;
+            background:#1e40af;
+            padding:6px 10px;
+            border-radius:20px;
+            margin:4px;
+            font-size:12px;
+        }
+
+        .top{
+            border:2px solid #22c55e;
+        }
+
+        @media(max-width:768px){
+            .stats{
+                grid-template-columns:1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>AI Hiring Dashboard</h1>
+    <p class="subtitle">Smart analytics and ranked candidates</p>
+
+    <div class="stats">
+        <div class="stat">
+            <h2>{{ total }}</h2>
+            <p>Total Resumes</p>
+        </div>
+
+        <div class="stat">
+            <h2>{{ highest }}%</h2>
+            <p>Highest Score</p>
+        </div>
+
+        <div class="stat">
+            <h2>{{ average }}%</h2>
+            <p>Average Score</p>
+        </div>
+
+        <div class="stat">
+            <h2>{{ qualified }}</h2>
+            <p>70%+ Candidates</p>
+        </div>
+    </div>
+
+    {% for r in results %}
+    <div class="card {% if loop.index == 1 %}top{% endif %}">
+        <h3>#{{ loop.index }} {{ r.filename }}</h3>
+        <p>Match Score: {{ r.score }}%</p>
+
+        <div class="score-bar">
+            <div class="fill" style="width: {{ r.score | default(0) }}%"></div>
+        </div>
+
+        <br>
+        <p><b>Skills:</b></p>
+
+        {% for skill in r.skills %}
+            <span class="badge">{{ skill }}</span>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>

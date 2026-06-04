@@ -1,11 +1,10 @@
-AI Resume Ranker
+<img width="1770" height="849" alt="image" src="https://github.com/user-attachments/assets/8426c358-454a-4f49-a09c-be1261cc6698" />AI Resume Ranker
 
 Overview
 
 AI Resume Ranker is a web-based application designed to analyze resumes and compare them with a given job description. The system generates a matching score that indicates how well a candidate’s resume aligns with the required job profile. It also highlights missing skills and provides basic suggestions for improvement.
 
 This project demonstrates practical implementation of Natural Language Processing and web development using Flask.
-
 
 
 Features
@@ -18,7 +17,9 @@ Features
 * Provide basic improvement feedback
 * Simple and responsive web interface
 
-
+Live Demo
+Currently running locally:
+http://127.0.0.1:5000
 
 Tech Stack
 

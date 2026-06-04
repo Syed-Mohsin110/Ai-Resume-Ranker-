@@ -1,4 +1,7 @@
-<img width="1770" height="849" alt="image" src="https://github.com/user-attachments/assets/8426c358-454a-4f49-a09c-be1261cc6698" />AI Resume Ranker
+<img width="1205" height="875" alt="Ai resume ranker dashboard" src="https://github.com/user-attachments/assets/3bc1bc02-92c2-45b3-9ec6-133e142fd342" />
+<img width="1168" height="858" alt="wih dada" src="https://github.com/user-attachments/assets/e25da981-9593-4ed2-8e91-00205a06d649" />
+<img width="902" height="905" alt="resul" src="https://github.com/user-attachments/assets/259104e0-789d-41a4-9de5-7f0362291f5d" />
+
 
 Overview
 
